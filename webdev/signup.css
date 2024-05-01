@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .signup-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 320px;
+    margin: 50px auto;
+    position: relative;
+  }
+  
+  .logo {
+    width: 100px; /* Adjust as needed */
+    display: block;
+    margin: 0 auto 20px;
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  
+  .input-group {
+    margin-bottom: 15px;
+  }
+  
+  .input-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  .submit-button, .cancel-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .submit-button:hover, .cancel-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .already-user {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .already-user a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  /* Background images */
+  .background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('background.jpg');
+    background-size: cover;
+    z-index: -1;
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+  }
+  @media only screen and (max-width: 600px) {
+    .signup-container {
+      width: 90%;
+    }
+  
+    .input-group input {
+      font-size: 14px;
+    }
+  
+    .submit-button, .cancel-button {
+      font-size: 14px;
+    }
+  }
+  

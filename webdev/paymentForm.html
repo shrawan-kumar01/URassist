@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        .payment-option {
+            margin-bottom: 20px;
+        }
+
+        .input-field {
+            margin-bottom: 10px;
+        }
+
+        .pay-button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Media Query for Responsive Design */
+        @media screen and (max-width: 600px) {
+            .container {
+                width: 90%;
+                margin: 30px auto;
+            }
+
+            .payment-option {
+                text-align: center;
+            }
+
+            .payment-logo {
+                max-width: 100px;
+                margin-bottom: 10px;
+            }
+
+            .input-field {
+                margin-bottom: 20px;
+            }
+
+            .pay-button {
+                width: 80%;
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2 style="text-align: center;">Payment Page</h2>
+        <div class="payment-option">
+            <img src="phonepay_logo.png" alt="PhonePe Logo" class="payment-logo">
+            <div class="input-field">
+                <label for="phonepay-number">PhonePe Number:</label>
+                <input type="text" id="phonepay-number" placeholder="Enter PhonePe number">
+            </div>
+        </div>
+        <div class="payment-option">
+            <img src="paytm_logo.png" alt="Paytm Logo" class="payment-logo">
+            <div class="input-field">
+                <label for="paytm-number">Paytm Number:</label>
+                <input type="text" id="paytm-number" placeholder="Enter Paytm number">
+            </div>
+        </div>
+        <div class="payment-option">
+            <img src="paypal_logo.png" alt="PayPal Logo" class="payment-logo">
+            <div class="input-field">
+                <label for="paypal-email">PayPal Email:</label>
+                <input type="email" id="paypal-email" placeholder="Enter PayPal email">
+            </div>
+        </div>
+        <div class="payment-option">
+            <img src="debit_card_logo.png" alt="Debit Card Logo" class="payment-logo">
+            <div class="input-field">
+                <label for="debit-card-number">Debit Card Number:</label>
+                <input type="text" id="debit-card-number" placeholder="Enter debit card number">
+            </div>
+        </div>
+        <div class="payment-option">
+            <img src="credit_card_logo.png" alt="Credit Card Logo" class="payment-logo">
+            <div class="input-field">
+                <label for="credit-card-number">Credit Card Number:</label>
+                <input type="text" id="credit-card-number" placeholder="Enter credit card number">
+            </div>
+        </div>
+        <button class="pay-button" onclick="validatePayment()">Pay Now</button>
+    </div>
+
+    <script>
+        function validatePayment() {
+            // JavaScript validation function
+            // Example: Check if all required fields are filled for each payment option
+            const phonepayInput = document.getElementById('phonepay-number').value.trim();
+            const paytmInput = document.getElementById('paytm-number').value.trim();
+            const paypalEmailInput = document.getElementById('paypal-email').value.trim();
+            const debitCardInput = document.getElementById('debit-card-number').value.trim();
+            const creditCardInput = document.getElementById('credit-card-number').value.trim();
+
+            if (!phonepayInput && !paytmInput && !paypalEmailInput && !debitCardInput && !creditCardInput) {
+                alert('Please enter payment details.');
+                return;
+            }
+
+            // Additional validation or transactional implementations can be added here
+            // For example: API calls, data processing, etc.
+
+            // Once validation and processing are done, proceed with payment
+            alert('Payment successful!');
+        }
+    </script>
+</body>
+
+</html>

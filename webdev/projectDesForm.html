@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>University Project Registration</title>
+  <link rel="stylesheet" href="projectDesForm.css">
+</head>
+<body>
+  <div class="container">
+    <img src="logo.png" alt="University Logo" class="logo">
+    <div class="form-container">
+      <h2>Project Registration</h2>
+      <form id="registration-form">
+        <div class="input-group">
+          <label for="project-title">Project Title:</label>
+          <input type="text" id="project-title" name="project-title" required>
+        </div>
+        <div class="input-group">
+          <label for="project-description">Project Description:</label>
+          <textarea id="project-description" name="project-description" rows="4" required></textarea>
+        </div>
+        <div class="input-group">
+          <label for="project-domain">Project Domain:</label>
+          <select id="project-domain" name="project-domain" required>
+            <option value="Computer Science">Computer Science</option>
+            <option value="Electrical Engineering">Electrical Engineering</option>
+            <option value="Mechanical Engineering">Mechanical Engineering</option>
+            <!-- Add more options as needed -->
+          </select>
+        </div>
+        <div class="input-group">
+          <label for="team-members">Team Members:</label>
+          <div id="team-members">
+            <!-- Dynamic team member fields will be added here -->
+          </div>
+          <button type="button" id="add-member-btn">Add Member</button>
+        </div>
+        <div class="input-group">
+          <label for="file-upload">Upload Files:</label>
+          <input type="file" id="file-upload" name="file-upload" multiple>
+        </div>
+        <button type="submit" id="save-proceed-btn">Save & Proceed</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="projectDesForm.js"></script>
+</body>
+</html>

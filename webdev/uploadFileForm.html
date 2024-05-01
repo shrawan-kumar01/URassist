@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Upload Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            width: 400px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .input-group input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h2>Upload Project Files</h2>
+            <form id="upload-form">
+                <div class="input-group">
+                    <label for="cover-photo">Cover Photo:</label>
+                    <input type="file" id="cover-photo" name="cover-photo" accept="image/*" required>
+                </div>
+                <div class="input-group">
+                    <label for="index-page">Index Page:</label>
+                    <input type="file" id="index-page" name="index-page" accept=".html" required>
+                </div>
+                <div class="input-group">
+                    <label for="project-description">Project Description:</label>
+                    <input type="file" id="project-description" name="project-description" accept=".pdf" required>
+                </div>
+                <button type="submit">Save & Proceed</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("upload-form").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Form validation logic goes here
+
+            // Simulate form submission for demonstration
+            console.log("Form submitted successfully!");
+        });
+    </script>
+</body>
+
+</html>
